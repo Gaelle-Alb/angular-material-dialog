@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material';
+//TO INSTALL IN THE APP FOLDER :
+//$>npm install --save @angular/material @angular/cdk
+//$>npm install --save @angular/animations
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 
 @Component({
   selector: 'app-root',
