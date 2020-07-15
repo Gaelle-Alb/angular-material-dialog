@@ -19,6 +19,7 @@ export class AppComponent {
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
+    //dialogConfig.panelClass = 'custom-dialog-box';
     //Other options: hasBackdrop, panelClass, backdropClass, position, direction, closeOnNavigation
 
     dialogConfig.data = {
