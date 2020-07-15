@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-//TO INSTALL IN THE APP FOLDER :
-//$>npm install --save @angular/material @angular/cdk
-//$>npm install --save @angular/animations
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
@@ -24,6 +21,17 @@ export class AppComponent {
     dialogConfig.autoFocus = true;
     //Other options: hasBackdrop, panelClass, backdropClass, position, direction, closeOnNavigation
 
-    this.dialog.open(CourseDialogComponent, dialogConfig);
+    dialogConfig.data = {
+      name: "some data",
+      id: 1,
+      title: 'Angular for beginners'
+    };
+
+    const dialogRef = this.dialog.open(CourseDialogComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(
+        data => console.log("Dialog output:", data)
+    );
+
   }
 }

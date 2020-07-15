@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//TO INSTALL IN THE APP FOLDER :
-//$>npm install --save @angular/material @angular/cdk
-//$>npm install --save @angular/animations
+//Needed if you use formGroup in mat-dialog-content
+//import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +16,11 @@ import { CourseDialogComponent } from './course-dialog/course-dialog.component';
   ],
   imports: [
     BrowserModule,
+    //FormsModule,
+    //ReactiveFormsModule,
     AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
